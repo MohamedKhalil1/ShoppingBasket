@@ -9,37 +9,44 @@
 
         <!-- Booststrap CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        {{-- <link rel="stylesheet" href="code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> --}}
+        {{-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> --}}
+        {{-- <link rel="stylesheet" href="../libraries/jquery-ui.min.css">
+        <link rel="stylesheet" href="../libraries/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="../libraries/jquery-ui.theme.min.css"> --}}
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+         @yield('links')
 
         <!-- Styles -->
         <style>
            .social{
-            float: right;
-            margin-top: 8px;
-            margin-right: 30px;
+                float: right;
+                margin-top: 8px;
+                margin-right: 30px;
            }
            .navbar{
-            background-color: #FF8067; 
+                background-color: #FF8067; 
            }
            .navbar a{
-            color: #FEF5E5;
+                color: #FEF5E5;
            }
            .slider-image{
-            height: 300px;
-            margin: 0 auto;
+                height: 300px;
+                margin: 0 auto;
            }
             .footer{
                 background-color: #EEE;
                 height: 300px;
                 border-top: 3px solid #FF8067;
                 border-bottom: 3px solid #FF8067;
+                bottom: 0;
+                margin: 0 auto;
             }
             .copy-right{
                 background-color: #FF8067;
                 text-align: right;
                 height: 70px;
-                margin-top: -49px;
             }
             .sub-container{
                 margin-top: 40px;
@@ -136,18 +143,20 @@
                     </div> 
                 </div>       
             </div>
-
-            <div class="copy-right">
+        </div>
+        
+        <div class="copy-right">
                 <div class="container">
                     <span><p class="copyright-paragraph">copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 Mohamed A. Khalil. All Rights reserved</span></p>
                 </div>
             </div>
-        </div>
         
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        {{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="https://use.fontawesome.com/17968ae4f4.js"></script>
+        @yield('scripts')
     </body>
 </html>

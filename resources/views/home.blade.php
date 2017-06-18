@@ -31,7 +31,7 @@
             margin-top: 40px;
         }
         .product-image{
-            height: 200px;
+            height: auto;
             width: 100%;
             margin: 0 auto;
         }
