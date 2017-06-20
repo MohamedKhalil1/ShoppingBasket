@@ -70,45 +70,21 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <a class="navbar-brand" href="#">Shopping Basket</a>
+            <a class="navbar-brand" href="{{url('/')}}">Shopping Basket</a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                
                 <ul class="navbar-nav mr-auto">
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/categories')}}">Categories</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="{{url('/cart')}}">Cart</a>
                     </li>
+                </ul>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Men</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Women</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Girls</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Boys</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>  
-                </ul>    
-                
                  <ul class="nav navbar-nav navbar-right ml-auto">
                    
                     <li class="nav-item social">
@@ -144,12 +120,12 @@
                 </div>       
             </div>
         </div>
-        
-        <div class="copy-right">
-                <div class="container">
-                    <span><p class="copyright-paragraph">copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 Mohamed A. Khalil. All Rights reserved</span></p>
-                </div>
+
+        <div class="copy-right col-md-12">
+            <div class="container">
+                <p class="copyright-paragraph">copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2017 Mohamed A. Khalil. All Rights reserved</p>
             </div>
+        </div>
         
         <!-- Scripts -->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

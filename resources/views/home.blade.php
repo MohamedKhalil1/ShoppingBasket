@@ -39,39 +39,28 @@
             margin-bottom: 30px;
         }
         .shop-product{
-          margin-right: 33px;
-          margin-bottom: 10px;
-          position: absolute;
-          bottom: 0;
           width: 40%;
-          text-align: center;
           background-color: #FF8067;
           color: white;
-        }
-        .like-product{
+          font-size: 80%;
+          right: 30px;
           position: absolute;
-          margin-left: 120px;
-          margin-bottom: 10px;
-          bottom: 0;
-          width: 20%;
-          background-color: #EEE;
-        }
-        .heart{
-            color: grey;
+          text-align: center;
         }
         .card-text{
             color: grey;
             font-size: 90%;
-            margin-bottom: 40px;
+            /*margin-bottom: 40px;*/
         }
         .currency{
-            color: #FF8067;
-            font-weight: bold;
-            font-size: 100%;
-            margin-top: -30px;
+            font-size: 150%;
+        	 color: #FF8067;
+        	 float: left;
+        	 /*margin-right: 31px;*/
         }
     </style>
 @endsection
+
 @section('content')
 	<body>
 		<!--slider-->
@@ -119,85 +108,100 @@
 	        <div class="card-deck">
 	            <div class="row">
 	                <div class="card col-md-3">
-	                    <img class="card-img-top center-block product-image" src="../images/tshirt2.png" alt="Card image cap">
+	            		<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top center-block product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                    </a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p>
-	                        <p class="card-text currency">$50</p>
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p>
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div>
-	                 <div class="card col-md-3">
-	                    <img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+
+	                <div class="card col-md-3">
+	            		<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                   	</a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p> 
-	                        <p class="card-text currency">$50</p>
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p>
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div>
+
 	                <div class="card col-md-3">
-	                    <img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	            		<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                    </a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p>
-	                        <p class="card-text currency">$50</p>
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p>
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div>
+
 	                <div class="card col-md-3">
-	                    <img class="card-img-top center-block product-image" src="../images/tshirt2.png" alt="Card image cap">
+	          		  	<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top center-block product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                    </a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p>
-	                        <p class="card-text currency">$50</p>
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p>
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div>
 	            </div>
+
 	            <div class="row">    
-	                 <div class="card col-md-3">
-	                    <img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                <div class="card col-md-3">
+	            		<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                    </a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p> 
-	                        <p class="card-text currency">$50</p> 
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p> 
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div>
+
 	                <div class="card col-md-3">
-	                    <img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	            		<a href="{{url('/products/{id}')}}">	                   
+	                    	<img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                    </a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p>
-	                        <p class="card-text currency">$50</p> 
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p> 
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div> 
+
 	                 <div class="card col-md-3">
-	                    <img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	            		<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                   	</a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p>
-	                        <p class="card-text currency">$50</p> 
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p> 
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div> 
+
 	                <div class="card col-md-3">
-	                    <img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	            		<a href="{{url('/products/{id}')}}">
+	                    	<img class="card-img-top product-image" src="../images/tshirt2.png" alt="Card image cap">
+	                    </a>
 	                    <div class="card-block">
 	                        <h5 class="card-title">Super Slim T-shirt</h5>
 	                        <p class="card-text">Adidas</p>
-	                        <p class="card-text currency">$50</p> 
-	                        <button class="btn shop-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</button>
-	                        <button class="btn like-product"><span class="heart"><i class="fa fa-heart" aria-hidden="true"></span></i></button>
+	                        <p class="card-text currency">$49.99</p> 
+	                        <button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
 	                    </div>
 	                </div>     
 	            </div>

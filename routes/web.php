@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/product-details', function() {
-	return view('product-details');
-});
+Route::get('/', 'homeController@index')->name('home');
+
+Route::get('/products/{id}', 'productController@show');
+
+Route::get('/categories', 'productCategoryController@show');
+
+Route::get('/cart', 'cartController@show');
+

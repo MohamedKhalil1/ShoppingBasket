@@ -85,12 +85,12 @@
                <p id="details-title">Awesome Super slim red T-shirt</p>
                <p class="details">Availability: <span style="color: #FF8067">YES</span> (92 items in stock)</p>
                <p class="details">Manufacturer: Adidas</p>
+               <p style="margin-left: auto; font-size: 150%; color: #FF8067;" class="mr-sm-2">$49.99</p>
 
                <div id="tabs">
                   <ul>
-                    <li><a href="#fragment-1" class="tabs-titles"><span style="color: white; font-weight: bold;">More Info</span></a></li>
-                    <li><a href="#fragment-2" class="tabs-titles"><span>Accessories</span></a></li>
-                    <li><a href="#fragment-3" class="tabs-titles"><span>Comments</span></a></li>
+                    <li><a href="#fragment-1" class="tabs-titles"><span style="color: white; font-weight: bold;">Description</span></a></li>
+                    <li><a href="#fragment-2" class="tabs-titles"><span style="color: white; font-weight: bold;">Comments</span></a></li>
                   </ul>
                   <div id="fragment-1">
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -102,45 +102,11 @@
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                   </div>
-                  <div id="fragment-3">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                  </div>
                </div>
                
                <div class="form">
-                  <form class="form-inline">
-                     <label class="mr-sm-2" for="size-select">Size</label>
-                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="size-select">
-                       <option selected>XXL</option>
-                       <option value="1">XL</option>
-                       <option value="2">L</option>
-                       <option value="3">M</option>
-                       <option value="4">s</option>
-                     </select>
-
-                     <label class="mr-sm-2" for="color-select">Color</label>
-                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="color-select">
-                       <option selected>Red</option>
-                       <option value="1">Green</option>
-                       <option value="2">Blue</option>
-                       <option value="3">Yellow</option>
-                       <option value="4">Black</option>
-                     </select>
-
-                     <label class="mr-sm-2" for="quantity-select">Quantity</label>
-                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="quantity-select">
-                       <option selected>1</option>
-                       <option value="1">2</option>
-                       <option value="2">3</option>
-                       <option value="3">4</option>
-                       <option value="4">5</option>
-                     </select>
-
-                      <label style="margin-left: auto; font-size: 150%; color: #FF8067;" class="mr-sm-2">$49.99</label>
-
-                     <button type="submit" class="btn"><i style="margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i> Buy this item</button>
+                  <form method="POST" class="form-inline">
+                     <button type="submit" class="btn"><i style="margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
                   </form>
                </div>
             </div>
