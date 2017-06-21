@@ -10,4 +10,9 @@ class cartController extends Controller
     {
     	return view('cart');
     }
+
+    public function store()
+    {
+    	
+    }
 }

@@ -25,6 +25,9 @@
                 margin-top: 8px;
                 margin-right: 30px;
            }
+           .login{
+            margin-right: 50px;
+           }
            .navbar{
                 background-color: #FF8067; 
            }
@@ -81,12 +84,28 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/cart')}}">Cart</a>
+                        <a class="nav-link" href="{{url('/cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
                     </li>
                 </ul>
-
-                 <ul class="nav navbar-nav navbar-right ml-auto">
+                
+               
+                <ul class="nav navbar-nav navbar-right ml-auto">
                    
+                    @if(! Auth::check())
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/register')}}">Register</a>
+                        </li>
+
+                         <li class="nav-item login">
+                            <a class="nav-link" href="{{url('/login')}}">Login</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a href="{{url('/logout')}}" class="nav-link" style="margin-right: 20px;">Logout, {{ Auth::user()->name }}</a>
+                        </li>
+                    @endif    
+
+
                     <li class="nav-item social">
                         <a class="fa fa-facebook" href="#" aria-hidden="true"></a>
                     </li>

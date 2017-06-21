@@ -74,18 +74,16 @@
 @section('content')
    <body>
       <div class="container body-container">
-
          <div class="row">
-           <div class="image col-md-4">
-             <img class="product-details-image col-md-5" src="../images/tshirt1.png">
-           </div>
+            <div class="image col-md-4">
+               <img class="product-details-image col-md-5" src="../../images/{{ $product->productimage }}">
+            </div>
 
             <div class="col-md-8">
 
-               <p id="details-title">Awesome Super slim red T-shirt</p>
-               <p class="details">Availability: <span style="color: #FF8067">YES</span> (92 items in stock)</p>
-               <p class="details">Manufacturer: Adidas</p>
-               <p style="margin-left: auto; font-size: 150%; color: #FF8067;" class="mr-sm-2">$49.99</p>
+               <p id="details-title">{{$product->name}}</p>
+               <p class="details">Availability: <span style="color: #FF8067">YES</span> ({{$product->stockquantity}} items in stock)</p>
+               <p style="margin-left: auto; font-size: 150%; color: #FF8067;" class="mr-sm-2">${{$product->price}}</p>
 
                <div id="tabs">
                   <ul>
@@ -117,7 +115,7 @@
          <div class="cards row">
             <div class="card-deck">
                <div class="card col-md-3">
-                  <img class="card-img-top card-image" src="../images/tshirt2.png" alt="Card image cap">
+                  <img class="card-img-top card-image" src="../../images/tshirt2.png" alt="Card image cap">
                   <div class="card-block">
                      <h4 class="card-title">Super Slim T-shirt</h4>
                      <p class="card-text product-price">$49.99</p>
@@ -126,7 +124,7 @@
                </div>
                
                <div class="card col-md-3">
-                  <img class="card-img-top card-image" src="../images/tshirt2.png" alt="Card image cap">
+                  <img class="card-img-top card-image" src="../../images/tshirt2.png" alt="Card image cap">
                   <div class="card-block">
                      <h4 class="card-title">Super Slim T-shirt</h4>
                      <p class="card-text product-price">$49.99</p>
@@ -135,7 +133,7 @@
                </div>
 
                <div class="card col-md-3">
-                  <img class="card-img-top card-image" src="../images/tshirt2.png" alt="Card image cap">
+                  <img class="card-img-top card-image" src="../../images/tshirt2.png" alt="Card image cap">
                   <div class="card-block">
                      <h4 class="card-title">Super Slim T-shirt</h4>
                      <p class="card-text product-price">$49.99</p>
@@ -144,7 +142,7 @@
                </div>
 
                <div class="card col-md-3">
-                  <img class="card-img-top card-image" src="../images/tshirt2.png" alt="Card image cap">
+                  <img class="card-img-top card-image" src="../../images/tshirt2.png" alt="Card image cap">
                   <div class="card-block">
                      <h4 class="card-title">Super Slim T-shirt</h4>
                      <p class="card-text product-price">$49.99</p>

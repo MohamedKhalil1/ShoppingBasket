@@ -1,7 +1,13 @@
 @extends('layout')
 
+@section('styles')
+	<style>
+		
+	</style>
+@endsection
+
 @section('content')
 
-This is the Product Category Section.
+<p>This is the Product Category Section.</p>
 		
 @endsection

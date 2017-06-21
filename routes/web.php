@@ -11,11 +11,29 @@
 |
 */
 
-Route::get('/', 'homeController@index')->name('home');
+/*----------  home controller  ----------*/
+Route::get('/', 'HomeController@index');
 
+/*----------  registeration controller  ----------*/
+Route::get('/register', 'registerController@show');
+Route::post('/register', 'registerController@store');
+
+/*----------  session controller  ----------*/
+Route::get('/login', 'sessionController@show');
+Route::post('/login', 'sessionController@store');
+Route::get('/logout', 'sessionController@logout');
+
+
+/*----------  products controller  ----------*/
 Route::get('/products/{id}', 'productController@show');
 
+
+/*----------  product categories controller  ----------*/
 Route::get('/categories', 'productCategoryController@show');
 
+
+/*----------  cart controller  ----------*/
 Route::get('/cart', 'cartController@show');
+Route::post('/cart', 'cartController@store');
+
 
