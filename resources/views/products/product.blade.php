@@ -1,6 +1,6 @@
 <div class="card col-md-3">
 	<a href="{{ url('/products/'.$product->id) }}">
-    	<img class="card-img-top center-block product-image" src="../images/{{ $product->productimage }}" alt="Card image cap">
+    	<img class="card-img-top center-block product-image" src="../storage/app/{{ $product->productimage }}" alt="Card image cap">
     </a>
     <div class="card-block">
             <h5 class="card-title">{{ $product->name }}</h5>

@@ -15,7 +15,8 @@ class CreateShoppingBasketsTable extends Migration
     {
         Schema::create('shopping_baskets', function (Blueprint $table) {
             $table->increments('id');
-            $table->dateTime('date');
+            $table->string('name')->nullable();
+            $table->dateTime('date')->nullable();
             $table->enum('status', ['active', 'not-active']);
             $table->timestamps();
         });

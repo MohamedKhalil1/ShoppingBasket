@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 /*----------  home controller  ----------*/
 Route::get('/', 'HomeController@index');
@@ -17,6 +7,7 @@ Route::get('/', 'HomeController@index');
 /*----------  registeration controller  ----------*/
 Route::get('/register', 'registerController@show');
 Route::post('/register', 'registerController@store');
+
 
 /*----------  session controller  ----------*/
 Route::get('/login', 'sessionController@show');
@@ -34,6 +25,20 @@ Route::get('/categories', 'productCategoryController@show');
 
 /*----------  cart controller  ----------*/
 Route::get('/cart', 'cartController@show');
-Route::post('/cart', 'cartController@store');
+// Route::get('/cart/products/{id}', 'cartController@showProduct');
+// Route::post('/cart/products/{id}', 'cartController@storeProduct');
+// Route::post('/cart/delete', 'cartController@delete');
+
+/*----------  Admin controller  ----------*/
+Route::group(['prefix' => 'admin'], function() {
+	Route::get('/', 'adminController@index');
+	Route::get('products', 'adminController@viewProducts');
+	Route::post('addProduct', 'adminController@addProduct');
+	Route::get('editProduct/{id}', 'adminController@editProduct');
+	Route::put('updateProduct', 'adminController@updateProduct');
+	Route::delete('deleteProduct/{id}', 'adminController@deleteProduct');
+
+});
+
 
 

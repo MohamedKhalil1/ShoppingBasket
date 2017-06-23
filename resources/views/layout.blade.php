@@ -9,11 +9,7 @@
 
         <!-- Booststrap CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        {{-- <link rel="stylesheet" href="code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> --}}
-        {{-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> --}}
-        {{-- <link rel="stylesheet" href="../libraries/jquery-ui.min.css">
-        <link rel="stylesheet" href="../libraries/jquery-ui.structure.min.css">
-        <link rel="stylesheet" href="../libraries/jquery-ui.theme.min.css"> --}}
+        
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
          @yield('links')

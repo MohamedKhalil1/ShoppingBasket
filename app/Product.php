@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $guarded =[''];
+    public function ShoppingBaskets($value='')
+    {
+    	return $this->belongsTo(ShoppingBasket::class, 'id');
+    }
 }

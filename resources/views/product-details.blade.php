@@ -76,7 +76,7 @@
       <div class="container body-container">
          <div class="row">
             <div class="image col-md-4">
-               <img class="product-details-image col-md-5" src="../../images/{{ $product->productimage }}">
+               <img class="product-details-image col-md-5" src="../../storage/app/{{ $product->productimage }}">
             </div>
 
             <div class="col-md-8">
@@ -103,8 +103,9 @@
                </div>
                
                <div class="form">
-                  <form method="POST" class="form-inline">
-                     <button type="submit" class="btn"><i style="margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>
+                  <form method="GET" action="{{url('/cart')}}" class="form-inline">  
+                     {{csrf_field()}}
+                     <button type="submit" class="btn"><i style="margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>   
                   </form>
                </div>
             </div>
