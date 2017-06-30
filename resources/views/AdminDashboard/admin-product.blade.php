@@ -56,8 +56,8 @@
                               <td>{{ $product->stockquantity }}</td>
                               <td>{{ $product->price }}</td>
                               <td>
-                                 <a style="border-right: 1px solid blue; padding-right: 5px;" href="{{ url('admin/editProduct/'.$product->id) }}">Edit</a>
-                                 <a href="{{ url('admin/deleteProduct/'.$product->id)}}" data-method="delete">Delete</a>
+                                 <a style="border-right: 1px solid blue; padding-right: 5px;" href="{{ url('admin/products/edit/'.$product->id) }}">Edit</a>
+                                 <a id="delete-product" href="{{ url('admin/products/delete/'.$product->id) }}" data-method="delete" data-delete="{{ $product->id }}" type="hidden" name="_method">Delete</a>
                               </td>                                                  
                            </tr>
                        @endforeach
@@ -71,7 +71,7 @@
       <div class="modal fade mt-50" id="add-product-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
          <div class="modal-dialog" role="document">
             <div class="modal-content">
-               <form method="POST" action="{{url('/admin/addProduct')}}" id="add-product" enctype="multipart/form-data">
+               <form method="POST" action="{{url('/admin/product/add')}}" id="add-product" enctype="multipart/form-data">
                   
                   {{ csrf_field() }}
 
@@ -143,6 +143,17 @@
       <script>
          $(document).ready(function(){
          $('#myTable').DataTable();
+         });
+
+         $("#delete-product").on("click", function() {
+            $.ajax({
+               url: "{{ url('admin/products/delete'.$product->id)}}",
+               data: {id: id, _token: '{{ csrf_token() }}', _method: 'DELETE'},
+               type: "DELETE",
+               success: function(response) {
+                  window.location.reload();
+               },
+            });  
          });
       </script>    
    </body>

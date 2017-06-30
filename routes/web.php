@@ -33,10 +33,10 @@ Route::get('/cart', 'cartController@show');
 Route::group(['prefix' => 'admin'], function() {
 	Route::get('/', 'adminController@index');
 	Route::get('products', 'adminController@viewProducts');
-	Route::post('addProduct', 'adminController@addProduct');
-	Route::get('editProduct/{id}', 'adminController@editProduct');
-	Route::put('updateProduct', 'adminController@updateProduct');
-	Route::delete('deleteProduct/{id}', 'adminController@deleteProduct');
+	Route::post('product/add', 'adminController@addProduct');
+	Route::get('products/edit/{id}', 'adminController@editProduct');
+	Route::put('products/update/{id}', 'adminController@updateProduct');
+	Route::get('products/delete/{id}', 'adminController@deleteProduct');
 
 });
 
