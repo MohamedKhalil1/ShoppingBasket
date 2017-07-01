@@ -11,7 +11,13 @@ class cartController extends Controller
 {
     public function show()
     {
-    	$products = ShoppingBasket::all()->products;
-    	return view('cart', compact($products));
+    	$products = Product::all();
+    	return view('cart', compact('products'));
+    }
+
+    public function delete($id)
+    {
+        Product::find($id)->delete();
+    	return redirect('/cart');
     }
 }

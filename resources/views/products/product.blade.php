@@ -5,7 +5,8 @@
     <div class="card-block">
             <h5 class="card-title">{{ $product->name }}</h5>
             <p class="card-text currency">$ {{ $product->price }}</p>
-            <form method="POST" action="{{url('/cart')}}">
+            
+            <form method="GET" action="{{url('/cart')}}">
             	{{csrf_field()}}
             	<button class="btn shop-product"><i class="shop-cart fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
             </form>

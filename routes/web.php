@@ -24,14 +24,16 @@ Route::get('/categories', 'productCategoryController@show');
 
 
 /*----------  cart controller  ----------*/
-Route::get('/cart', 'cartController@show');
-// Route::get('/cart/products/{id}', 'cartController@showProduct');
-// Route::post('/cart/products/{id}', 'cartController@storeProduct');
-// Route::post('/cart/delete', 'cartController@delete');
-
+Route::group(['prefix' => 'cart'], function(){
+	Route::get('/', 'cartController@show');
+	Route::get('delete/{id}', 'cartController@delete');
+	// Route::get('/cart/products/{id}', 'cartController@showProduct');
+	// Route::post('/cart/products/{id}', 'cartController@storeProduct');
+});
 /*----------  Admin controller  ----------*/
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 	Route::get('/', 'adminController@index');
+	Route::get('/logout', 'adminController@logout');
 	Route::get('products', 'adminController@viewProducts');
 	Route::post('product/add', 'adminController@addProduct');
 	Route::get('products/edit/{id}', 'adminController@editProduct');

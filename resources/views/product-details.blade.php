@@ -103,9 +103,9 @@
                </div>
                
                <div class="form">
-                  <form method="GET" action="{{url('/cart')}}" class="form-inline">  
+                  <form method="POST" action="{{url('/cart')}}" class="form-inline">  
                      {{csrf_field()}}
-                     <button type="submit" class="btn"><i style="margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>   
+                     <button class="btn"><i style="margin-right: 5px;" class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</button>   
                   </form>
                </div>
             </div>

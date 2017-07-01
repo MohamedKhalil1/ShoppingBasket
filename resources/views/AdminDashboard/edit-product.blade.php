@@ -18,7 +18,7 @@
 
   <body>
   <div class="container form-container">
-    <form method="POST" action="{{ url('/admin/products/update'. $product->id) }}" id="edit-product" enctype="multipart/form-data">
+    <form method="POST" action="{{ url('/admin/products/update/'. $product->id) }}" id="edit-product" enctype="multipart/form-data">
                   
       {{ csrf_field() }}
       {{ method_field('PUT') }}

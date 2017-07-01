@@ -31,37 +31,48 @@
 
    </head>
    <body>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button> 
+        <a class="navbar-brand" href="{{url('/admin')}}">Admin Dashboard</a> 
+        @if(Auth::check())
+            <a class="ml-auto" href="{{url('admin/logout')}}">Log out, {{ Auth::user()->name }}</a>
+        @endif 
+        
+      </nav>
+
       <div class="container">
          <div id="btn-container">
             <button class="btn btn-primary add-product" data-toggle="modal" data-target="#add-product-modal"> Add New Product</button>
          </div>
+         
          <div class="row mt-20">
-           <div class="col-md-12">
+            <div class="col-md-12">
                <table class="table table-striped" id="myTable" style="border-collapse:collapse;" >
-                   <thead>
-                       <tr>
-                           <th>Id</th>
-                           <th>Name</th>
-                           <th>Stock Quantity</th>
-                           <th>Price</th>
-                           <th>Actions</th>
-
-                       </tr>
-                   </thead>
-                   <tbody>
-                       @foreach($products as $product)
-                           <tr>
-                              <td>{{ $product->id }}</td>
-                              <td>{{ $product->name }}</td>
-                              <td>{{ $product->stockquantity }}</td>
-                              <td>{{ $product->price }}</td>
-                              <td>
-                                 <a style="border-right: 1px solid blue; padding-right: 5px;" href="{{ url('admin/products/edit/'.$product->id) }}">Edit</a>
+                  <thead>
+                     <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Stock Quantity</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     @foreach($products as $product)
+                        <tr>
+                           <td>{{ $product->id }}</td>
+                           <td>{{ $product->name }}</td>
+                           <td>{{ $product->stockquantity }}</td>
+                           <td>{{ $product->price }}</td>
+                           <td>
+                              <a style="border-right: 1px solid blue; padding-right: 5px;" href="{{ url('admin/products/edit/'.$product->id) }}">Edit</a>
                                  <a id="delete-product" href="{{ url('admin/products/delete/'.$product->id) }}" data-method="delete" data-delete="{{ $product->id }}" type="hidden" name="_method">Delete</a>
                               </td>                                                  
                            </tr>
-                       @endforeach
-                   </tbody>
+                        @endforeach
+                  </tbody>
                </table>
             </div>
          </div>

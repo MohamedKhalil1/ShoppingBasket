@@ -11,6 +11,7 @@ class sessionController extends Controller
 	{
 		$this->middleware('guest',['except' => 'logout']);
 	}
+
 	public function show()
     {
     	return view('login');
@@ -26,14 +27,19 @@ class sessionController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials, $request->has('remember'))) {
-            return redirect('/');
+            if (Auth::user()->type == 'admin') {
+                return redirect('admin');
+            }   
+            elseif (Auth::user()->type == 'user') {
+                return redirect('/');
+            }  
+            else {
+            	return back()->withErrors([
+            		'message' => 'Email or password are not correct'
+            	]);
+            }	
         }
-        else {
-        	return back()->withErrors([
-        		'message' => 'Email or password are not correct'
-        	]);
-        }	
-    }
+    }    
 
     public function logout()
     {

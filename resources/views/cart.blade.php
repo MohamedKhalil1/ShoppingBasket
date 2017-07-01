@@ -23,7 +23,7 @@
       #details-title{
          font-weight: bold;
          font-size: 100%;
-         margin-bottom: 50px;
+         margin-bottom: 30px;
       }
       .details{
          color: grey;
@@ -67,10 +67,10 @@
 
 @section('scripts')
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
-            $(function() {
-              $( "#quantity").selectmenu();
-            });   
-        </script>
+   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script>
+      $(function() {
+        $( "#quantity").selectmenu();
+      });   
+   </script>
 @endsection
