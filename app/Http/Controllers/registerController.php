@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use \App\ProductCategory;
 use \App\User;
 
 class registerController extends Controller
@@ -14,7 +14,8 @@ class registerController extends Controller
 
      public function show()
     {
-    	return view('register');
+        $categories = ProductCategory::all();
+    	return view('register', compact('categories'));
     }
 
     public function store(Request $request)

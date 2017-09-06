@@ -1,20 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use \App\ProductCategory;
 use Auth;
 
 use Illuminate\Http\Request;
 
 class sessionController extends Controller
 {
-	public function __construct()
-	{
-		$this->middleware('guest',['except' => 'logout']);
-	}
-
 	public function show()
     {
-    	return view('login');
+        $categories = ProductCategory::all();
+    	return view('login', compact('categories'));
     }
 
     public function store(Request $request)

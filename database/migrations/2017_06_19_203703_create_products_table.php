@@ -15,9 +15,10 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('shopping_basket-id')->nullable();
+            $table->integer('shopping_basket_id')->nullable();
+            $table->integer('product_category_id')->nullable();
             $table->string('name');
-            $table->text('productimage');
+            $table->text('productimage')->nullable();
             $table->integer('stockquantity')->nullable();
             $table->decimal('discount', 6, 2)->nullable();
             $table->decimal('price', 6, 2); 
